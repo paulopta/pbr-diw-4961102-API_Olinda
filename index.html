@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCB - API Olinda</title>
+    <link rel="icon" href="assets/img/logo_pucminas.png" type="image/png">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>        
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="assets/img/image.png" class="img-fluid">   
+            </div>
+            <div class="col-9 text-center my-4 text-success">
+                <h1>Exercícios Práticos - API</h1>
+                <h3>Desenvolvimento de Interfaces WEB - Sistemas de Informação</h3>
+                <h3>Prof. Me. Paulo Henrique Rodrigues</h3>                
+            </div>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center"> Instruções</h2>
+            <p> Utilizando a <b>API Olinda do Banco Central do Brasil</b> (https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos/CotacaoDolarDia), desenvolva uma aplicação que receba um valor em reais do usuário e exiba quantos dólares ele consegue comprar com o valor informado. </p>
+            <p> Para tal, a aplicação deve realizar a consulta tendo como referência a data atual. </p>
+            <p> Observe a documentação da API para informar corretamente o  parâmetro de data e conseguir realizar a consulta. </p>                                    
+        </div>
+    </div>
+    <div class="container">
+        
+        <!-- 2ª Questão  -->
+        <div class="row">
+            <div class="row" style="margin-top: 15px; background-color:aquamarine; padding: 15px;">
+                <h5> Data e Tipo de Operação </h5>                
+                <div class="col-2">
+                  <label for="valora" class="form-label"><b>Data</b></label> 
+                  <input type="date" id="data" class="form-control" disabled="disabled">
+                </div>
+                <div class="col-2">
+                    <label for="operacao" class="form-label"><b>Operação</b></label> 
+                    <select id="operacao" class="form-control">
+                        <option value="compra">Compra</option>
+                        <option value="venda">Venda</option>
+                    </select>
+                </div>                                
+            </div>
+            <div class="row" style="margin-top: 15px; background-color:bisque; padding: 15px;">                
+                <h5> Valores e Resultado </h5>                
+                <div class="col-2">
+                    <label for="valor_compra" class="form-label"><b>Valor Compra (USD)</b></label>                     
+                    <input type="text" id="valor_compra" class="form-control" disabled="disabled">
+                </div>
+                <div class="col-2">
+                    <label for="valor_venda" class="form-label"><b>Valor Venda (USD)</b></label>                     
+                    <input type="text" id="valor_venda" class="form-control" disabled="disabled">
+                </div>
+                <div class="col-2">
+                    <label for="valorb" class="form-label"><b>Valor em Reais (R$)</b></label> 
+                    <input type="text" id="valor_reais" class="form-control">
+                </div>
+                <div class="col-1">
+                    <br/>
+                    <button type="button" id="btnCalcular" class="btn btn-primary">Calcular</button>
+                  </div>
+                <div class="col-3">
+                    <br/>
+                    <b>USD<span id="res2"> Resultado</span></b>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</html>
